@@ -1,0 +1,138 @@
+{
+  "id": {
+    "sessionId": "7ade43bae559c12158ac7f85b35a6bcb",
+    "elementId": "a4714ba8-8edb-45af-bdc5-488a46fc74a7",
+    "element-6066-11e4-a52e-4f735466cecf": "a4714ba8-8edb-45af-bdc5-488a46fc74a7",
+    "selector": "[id='courses-iframe']",
+    "parent": {
+      "sessionId": "7ade43bae559c12158ac7f85b35a6bcb",
+      "capabilities": {
+        "acceptInsecureCerts": true,
+        "browserName": "chrome",
+        "browserVersion": "99.0.4844.84",
+        "chrome": {
+          "chromedriverVersion": "99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875})",
+          "userDataDir": "/var/folders/3_/wh51kb951t7db1mxlwnp141h0000gn/T/.com.google.Chrome.1V0l91"
+        },
+        "goog:chromeOptions": {
+          "debuggerAddress": "localhost:49545"
+        },
+        "networkConnectionEnabled": false,
+        "pageLoadStrategy": "normal",
+        "platformName": "mac os x",
+        "proxy": {},
+        "setWindowRect": true,
+        "strictFileInteractability": false,
+        "timeouts": {
+          "implicit": 0,
+          "pageLoad": 300000,
+          "script": 30000
+        },
+        "unhandledPromptBehavior": "dismiss and notify",
+        "webauthn:extension:credBlob": true,
+        "webauthn:extension:largeBlob": true,
+        "webauthn:virtualAuthenticators": true
+      },
+      "config": {
+        "specs": [
+          "./test/specs/**/*.js"
+        ],
+        "suites": {
+          "debitCard": [
+            "test/specs/uiControls.js",
+            "test/specs/windowsFrames.js"
+          ],
+          "creditCard": [
+            "test/specs/eCommerceE2E.js"
+          ]
+        },
+        "exclude": [
+          "test/specs/eCommerceE2E.js"
+        ],
+        "logLevel": "silent",
+        "logLevels": {},
+        "excludeDriverLogs": [],
+        "bail": 10,
+        "waitforInterval": 500,
+        "waitforTimeout": 10000,
+        "framework": "mocha",
+        "reporters": [
+          [
+            "allure",
+            {
+              "outputDir": "allure-results",
+              "disableWebdriverScreenshotsReporting": false
+            }
+          ]
+        ],
+        "services": [
+          "chromedriver"
+        ],
+        "maxInstances": 6,
+        "maxInstancesPerCapability": 100,
+        "filesToWatch": [],
+        "connectionRetryTimeout": 120000,
+        "connectionRetryCount": 3,
+        "execArgv": [],
+        "runnerEnv": {},
+        "runner": "local",
+        "specFileRetries": 0,
+        "specFileRetriesDelay": 0,
+        "specFileRetriesDeferred": false,
+        "reporterSyncInterval": 100,
+        "reporterSyncTimeout": 5000,
+        "cucumberFeaturesWithLineNumbers": [],
+        "autoCompileOpts": {
+          "autoCompile": true,
+          "tsNodeOpts": {
+            "transpileOnly": true
+          },
+          "babelOpts": {}
+        },
+        "mochaOpts": {
+          "timeout": 60000,
+          "ui": "bdd"
+        },
+        "jasmineOpts": {
+          "defaultTimeoutInterval": 10000
+        },
+        "cucumberOpts": {
+          "timeout": 10000
+        },
+        "onPrepare": [],
+        "onWorkerStart": [],
+        "onWorkerEnd": [],
+        "before": [],
+        "beforeSession": [],
+        "beforeSuite": [],
+        "beforeHook": [],
+        "beforeTest": [],
+        "beforeCommand": [],
+        "afterCommand": [],
+        "afterTest": [
+          null
+        ],
+        "afterHook": [],
+        "afterSuite": [],
+        "afterSession": [],
+        "after": [],
+        "onComplete": [],
+        "onReload": [],
+        "beforeFeature": [],
+        "beforeScenario": [],
+        "beforeStep": [],
+        "afterStep": [],
+        "afterScenario": [],
+        "afterFeature": [],
+        "baseUrl": "https://rahulshettyacademy.com",
+        "_": [
+          "run"
+        ],
+        "$0": "node_modules/.bin/wdio",
+        "config-path": "wdio.conf.js",
+        "ignoredWorkerServices": []
+      }
+    },
+    "isReactElement": false
+  }
+}

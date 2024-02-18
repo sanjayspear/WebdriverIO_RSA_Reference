@@ -1,0 +1,91 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1649104964767' stop='1649104974524'>
+    <name>UI Controls Test Suite</name>
+    <title>UI Controls Test Suite</title>
+    <test-cases>
+        <test-case start='1649104964768' status='pending' stop='1649104964768'>
+            <name>UI Controls sanity</name>
+            <title>UI Controls sanity</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Test ignored</message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1649104964768' status='pending' stop='1649104964768'>
+            <name>Dynamic Dropdown Controls Smoke</name>
+            <title>Dynamic Dropdown Controls Smoke</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Test ignored</message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1649104964768' status='passed' stop='1649104974523'>
+            <name>Checkboxes Identification</name>
+            <title>Checkboxes Identification</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-3'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-99.0.4844.84'/>
+            </parameters>
+            <steps>
+                <step start='1649104964770' status='passed' stop='1649104973159'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='7a23a252-0a75-44cc-b3cc-4f3e7755fb56-attachment.json' type='application/json' size='65'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1649104973160' status='passed' stop='1649104973611'>
+                    <name>POST /session/:sessionId/elements</name>
+                    <title>POST /session/:sessionId/elements</title>
+                    <attachments>
+                        <attachment title='Request' source='7ffffaf6-bd48-425c-a49c-bbef7f4e307f-attachment.json' type='application/json' size='66'/>
+                        <attachment title='Response' source='1fdb4eb6-b99d-4bcf-baf9-df05536a538a-attachment.json' type='application/json' size='275'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1649104973620' status='passed' stop='1649104974031'>
+                    <name>POST /session/:sessionId/element/e65f0e7a-6d27-402f-a995-0f0545f2bfdd/click</name>
+                    <title>POST /session/:sessionId/element/e65f0e7a-6d27-402f-a995-0f0545f2bfdd/click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1649104974034' status='passed' stop='1649104974259'>
+                    <name>GET /session/:sessionId/element/e65f0e7a-6d27-402f-a995-0f0545f2bfdd/selected</name>
+                    <title>GET /session/:sessionId/element/e65f0e7a-6d27-402f-a995-0f0545f2bfdd/selected</title>
+                    <attachments>
+                        <attachment title='Response' source='5619da9d-f599-4b83-b108-2ca33144dfbf-attachment.json' type='application/json' size='4'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1649104974260' status='passed' stop='1649104974279'>
+                    <name>GET /session/:sessionId/element/355e1458-0942-49ac-9246-608f226f3e6a/selected</name>
+                    <title>GET /session/:sessionId/element/355e1458-0942-49ac-9246-608f226f3e6a/selected</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1649104974279' status='passed' stop='1649104974520'>
+                    <name>GET /session/:sessionId/screenshot</name>
+                    <title>GET /session/:sessionId/screenshot</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='93d149c1-1475-4f03-8935-24d7a5200146-attachment.png' type='image/png' size='191946'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
