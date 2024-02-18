@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": "//tr/td[4]/strong"
-}
