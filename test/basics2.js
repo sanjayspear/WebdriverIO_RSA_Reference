@@ -1,4 +1,4 @@
-module.exports = class Person {
+export default class Person {
   get location() {
     return "canada"
   }

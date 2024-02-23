@@ -1,10 +1,10 @@
-const loginPage = require('../pageobjects/loginPage')
-const shopPage = require('../pageobjects/shop')
-const reviewPage = require('../pageobjects/reviewpage')
-const expectchai = require('chai').expect
-const fs = require('fs')
-let credentials = JSON.parse(fs.readFileSync('test/testData/LoginTest.json'))
-let e2eCredentials = JSON.parse(fs.readFileSync('test/testData/e2eTest.json'))
+import { Login, alert, signIn, textInfo } from '../pageobjects/loginPage'
+import { checkout, addProductToCart } from '../pageobjects/shop'
+import { sumOfProducts as _sumOfProducts, totalFormattedPrice } from '../pageobjects/reviewpage'
+import { expect as expectchai } from 'chai'
+import { readFileSync } from 'fs'
+let credentials = JSON.parse(readFileSync('test/testData/LoginTest.json'))
+let e2eCredentials = JSON.parse(readFileSync('test/testData/e2eTest.json'))
 
 describe('Ecommerce Application', async () => {
 
@@ -16,15 +16,15 @@ describe('Ecommerce Application', async () => {
             console.log(await browser.getTitle())
             await expect(browser).toHaveTitleContaining("Rahul Shetty Academy")
             //Css Selector, Xpath
-            await loginPage.Login(username, password)
-            await console.log(await loginPage.alert.getText())
-            await browser.waitUntil(async () => await loginPage.signIn.getAttribute('value') === 'Sign In',
+            await Login(username, password)
+            await console.log(await alert.getText())
+            await browser.waitUntil(async () => await signIn.getAttribute('value') === 'Sign In',
                 {
                     timeout: 5000,
                     timeoutMsg: 'Error message is not showing up'
                 })
-            await console.log(await loginPage.alert.getText())
-            await expect(await loginPage.textInfo).toHaveTextContaining("username is rahulshettyacademy and Password is learning")
+            await console.log(await alert.getText())
+            await expect(await textInfo).toHaveTextContaining("username is rahulshettyacademy and Password is learning")
 
         })
     })
@@ -34,12 +34,12 @@ describe('Ecommerce Application', async () => {
         it('End to End Test', async () => {
             // const products = ['iphone X','Blackberry']
             await browser.url("/loginpagePractise/#")
-            await loginPage.Login("rahulshettyacademy", "learning")
-            await shopPage.checkout.waitForExist()  //link Text
-            await shopPage.addProductToCart(products)
-            await shopPage.checkout.click()
-            sumOfProducts = await reviewPage.sumOfProducts()
-            totalIntValue = await reviewPage.totalFormattedPrice()
+            await Login("rahulshettyacademy", "learning")
+            await checkout.waitForExist()  //link Text
+            await addProductToCart(products)
+            await checkout.click()
+            sumOfProducts = await _sumOfProducts()
+            totalIntValue = await totalFormattedPrice()
             await expectchai(sumOfProducts).to.equal(totalIntValue)
             await $(".btn-success").click()
             await $("#country").setValue("ind")
