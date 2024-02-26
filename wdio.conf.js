@@ -54,11 +54,27 @@ export const config = {
   //
   capabilities: [
     // {
+    //   maxInstances: 3,
     //   browserName: 'chrome',
+
+    //   // 'goog:chromeOptions': {
+    //   //   args: ['headless', 'disable-gpu']
+    //   // }
     // },
     {
+      maxInstances: 3,
+      //Runs in headed mode
       browserName: 'MicrosoftEdge',
-    }
+
+      //Runs with headless mode
+      // browserName: 'MicrosoftEdge',
+      // 'ms:edgeOptions': {
+      //   args: ['--headless']
+      // }
+    },
+
+
+
   ],
 
 

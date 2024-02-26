@@ -2,28 +2,33 @@ import { Login, alert, signIn, textInfo } from '../pageobjects/loginPage'
 import { checkout, addProductToCart } from '../pageobjects/shop'
 import { sumOfProducts as _sumOfProducts, totalFormattedPrice } from '../pageobjects/reviewpage'
 import { expect as expectchai } from 'chai'
+
+//Importing the readFileSync method from the 'fs' module in a JavaScript file
 import { readFileSync } from 'fs'
+
+//Loading and parsing login credentials from a JSON file in Node.js.
 let credentials = JSON.parse(readFileSync('test/testData/LoginTest.json'))
 let e2eCredentials = JSON.parse(readFileSync('test/testData/e2eTest.json'))
 
 describe('Ecommerce Application', async () => {
 
     credentials.forEach(({ username, password }) => {
-        xit('Login Fail page', async () => {
+        it('Login Fail page', async () => {
             //webdriverio Async  (Sync)
 
             await browser.url("/loginpagePractise/#")
             console.log(await browser.getTitle())
             await expect(browser).toHaveTitleContaining("Rahul Shetty Academy")
             //Css Selector, Xpath
+            //await Login(credentials.username, credentials.password);
             await Login(username, password)
-            await console.log(await alert.getText())
+            console.log(await alert.getText())
             await browser.waitUntil(async () => await signIn.getAttribute('value') === 'Sign In',
                 {
                     timeout: 5000,
                     timeoutMsg: 'Error message is not showing up'
                 })
-            await console.log(await alert.getText())
+            console.log(await alert.getText())
             await expect(await textInfo).toHaveTextContaining("username is rahulshettyacademy and Password is learning")
 
         })
